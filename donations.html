@@ -22,6 +22,118 @@
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <script defer src="js/animation.js"></script>
+    <style>
+      body {
+        background-color: #EEFDFC;
+        color: #333;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #D8F2EF;
+      }
+
+      .header .logo {
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .header nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #333;
+        font-size: 16px;
+      }
+
+      .header nav a.active {
+        font-weight: bold;
+        text-decoration: underline;
+      }
+
+      .main {
+        text-align: center;
+        padding: 50px;
+      }
+
+      .main h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+
+      .main p {
+        font-size: 18px;
+        color: #555;
+        margin-bottom: 40px;
+      }
+
+      .form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+      }
+
+      .form {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 400px;
+      }
+
+      .form label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 14px;
+        color: #333;
+      }
+
+      .form input,
+      .form textarea,
+      .form select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+
+      .form button {
+        width: 100%;
+        padding: 10px;
+        background-color: #D8F2EF;
+        color: black;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .form button:hover {
+        background-color: #aec7c4;
+      }
+
+      .footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #D8F2EF;
+        margin-top: 40px;
+      }
+
+      .footer a {
+        margin: 0 10px;
+        color: #333;
+        text-decoration: none;
+      }
+
+      .footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-md sticky-top">
@@ -50,7 +162,7 @@
         >
           <div class="navbar-nav">
             <a class="nav-link pe-lg-4 pe-xxl-5" href="index">HOME</a>
-            <a class="nav-link pe-lg-4 pe-xxl-5 active" href="about"
+            <a class="nav-link pe-lg-4 pe-xxl-5" href="about"
               >ABOUT</a
             >
             <a class="nav-link pe-lg-4 pe-xxl-5" href="projects"
@@ -58,12 +170,41 @@
             >
             <a class="nav-link pe-lg-4 pe-xxl-5" href="contact">CONTACT</a>
             <a class="nav-link pe-lg-4 pe-xxl-5" href="apply">APPLY</a>
+            <a class="nav-link pe-lg-4 pe-xxl-5 active" href="donate">DONATE</a>
           </div>
         </div>
       </div>
     </nav>
 
-<p> hello </p>
+    <div class="main">
+      <h1>Support Our Mission</h1>
+      <p>Your contribution helps us bring impactful projects to life, empowering communities through the power of technology and compassion.</p>
+
+      <div class="form-container">
+        <div class="form">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Enter your name">
+
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email">
+
+          <label for="amount">Donation Amount</label>
+          <input type="text" id="amount" placeholder="$50, $100, $200">
+
+          <label for="payment-method">Payment Method</label>
+          <select id="payment-method">
+            <option value="credit-card">Credit Card</option>
+            <option value="paypal">PayPal</option>
+            <option value="bank-transfer">Bank Transfer</option>
+          </select>
+
+          <label for="message">Message (Optional)</label>
+          <textarea id="message" rows="4" placeholder="Leave a note..."></textarea>
+
+          <button>Proceed to Payment</button>
+        </div>
+      </div>
+    </div>
     
     <!-- footer -->
     <div id="footer"></div>
