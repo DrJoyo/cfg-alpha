@@ -26,8 +26,6 @@
       body 
       {
         background-color: #EEFDFC;
-        margin: 0;
-        padding: 0;
         color: #333;
       }
 
@@ -46,19 +44,12 @@
         font-weight: bold;
       }
 
-      header h1 
-      {
-        margin: 0;
-        font-size: 24px;
-        font-weight: bold;
-      }
-
       .header nav a 
       {
         margin: 0 15px;
         text-decoration: none;
         color: #333;
-        font-weight: 16px;
+        font-size: 16px;
       }
 
       .header nav a.active 
@@ -67,98 +58,23 @@
         text-decoration: underline;
       }
 
-      .donor-wall 
-      {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        margin: 20px auto;
-        width: 90%;
-        max-width: 1200px;
-      }
-
-      .donor-section 
-      {
-        background-color: #fff;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        padding: 10px;
-        width: 30%;
-        overflow-y: auto;
-        height: 300px;
-      }
-
-      .donor-section h3 
-      {
-        font-size: 20px;
-        text-align: center;
-        color: #333;
-      }
-
-      .donor-section p 
-      {
-        margin: 5px 0;
-        font-size: 16px;
-        text-align: center;
-      }
-
-      .instructions 
-      {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        margin: 20px auto;
-        width: 90%;
-        max-width: 800px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      }
-
-      .instructions h2 
+      .main 
       {
         text-align: center;
+        padding: 50px;
+      }
+
+      .main h1 
+      {
+        font-size: 36px;
         margin-bottom: 20px;
-        font-size: 22px;
       }
 
-      .instructions ol 
+      .main p 
       {
-        margin: 0;
-        padding: 0;
-        list-style-position: inside;
-      }
-
-      .instructions ol li 
-      {
-        margin-bottom: 10px;
-        font-size: 16px;
-      }
-
-      .instructions ol ul li 
-      {
-        font-size: 14px;
-      }
-
-      .donate-button 
-      {
-        display: block;
-        text-align: center;
-        margin: 20px auto;
-      }
-
-      .donate-button a 
-      {
-        text-decoration: none;
-        background-color: #D8F2EF;
-        padding: 10px 20px;
         font-size: 18px;
-        color: #333;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-      }
-
-      .donate-button a:hover 
-      {
-        background-color: #1FAD9F;
+        color: #555;
+        margin-bottom: 40px;
       }
 
       .form-container 
@@ -215,36 +131,24 @@
         background-color: #aec7c4;
       }
 
-      .intro-section 
+      .footer 
       {
         text-align: center;
         padding: 20px;
+        background-color: #D8F2EF;
+        margin-top: 40px;
       }
 
-      .intro-section h2 
+      .footer a 
       {
-        font-size: 30px;
-        margin-bottom: 10px;
-      }
-
-      .intro-section p 
-      {
-        font-size: 18px;
-        color: #555;
-      }
-
-      .support-heading 
-      {
-        text-align: center;
-        margin-top: 30px;
-        font-size: 22px;
+        margin: 0 10px;
         color: #333;
+        text-decoration: none;
       }
 
-      .support-heading p 
+      .footer a:hover 
       {
-        font-size: 18px;
-        color: #555;
+        text-decoration: underline;
       }
     </style>
   </head>
@@ -288,126 +192,37 @@
         </div>
       </div>
     </nav>
-    
-    <section class="intro-section">
-      <h2>Thank You to Our Donors</h2>
-      <p>Thank you for your generous support of Code For Good!</p>
-    </section>
 
-    <section class="donor-wall">
-      <div class="donor-section">
-        <h3>Silver Donors</h3>
-        <p>Johan </p>
-        <p>Shayla</p>
-        <p>Mohammed</p>
-        <p>Johan </p>
-        <p>Shayla</p>
-        <p>Mohammed</p>
-        <p>Johan </p>
-        <p>Shayla</p>
-        <p>Mohammed</p>
-      </div>
-      <div class="donor-section">
-        <h3>Gold Donors</h3>
-        <p>Shayla</p>
-        <p>Mohammed</p>
-        <p>Johan</p>
-        <p>Shayla</p>
-        <p>Mohammed</p>
-        <p>Johan</p>
-        <p>Shayla</p>
-        <p>Mohammed</p>
-        <p>Johan</p>
-      </div>
-      <div class="donor-section">
-        <h3>Bronze Donors</h3>
-        <p>Mohammed</p>
-        <p>Johan</p>
-        <p>Shayla</p>
-        <p>Mohammed</p>
-        <p>Johan</p>
-        <p>Shayla</p>
-        <p>Mohammed</p>
-        <p>Johan</p>
-        <p>Shayla</p>
-      </div>
-    </section>
-
-    <div class="support-heading">
-      <h2>Support Our Mission</h2>
+    <div class="main">
+      <h1>Support Our Mission</h1>
       <p>Your contribution helps us bring impactful projects to life, empowering communities through the power of technology and compassion.</p>
-    </div>
 
-    <section class="instructions">
-      <h2>Step-by-Step Instructions for Donating to Code For Good</h2>
-      <ol>
-        <li>Visit the Donation Page
-          <ul>
-            <li><a href="https://donate.stripe.com/6oEeYJ5CX6Ay5a03cl">Donate to Code For Good</a></li>
-          </ul>
-        </li>
-        <li>Fill Out Contact Information
-          <ul>
-            <li>Enter your email address and phone number in the field labeled "Contact Information."</li>
-          </ul>
-        </li>
-        <li>Enter the Student Organization Name
-          <ul>
-            <li>In the field labeled "Student Organization Name," type Code For Good to ensure your donation is directed to our organization!</li>
-          </ul>
-        </li>
-        <li>Specify the Reason for Payment
-          <ul>
-            <li>From the dropdown menu labeled "Reason for Payment," select the appropriate reason for your donation.</li>
-          </ul>
-        </li>
-        <li>Provide the Name of the Donor
-          <ul>
-            <li>Enter the name of the person or entity making the payment in the designated field.</li>
-          </ul>
-        </li>
-        <li>Choose Your Payment Method
-          <ul>
-            <li>Select your preferred payment option:</li>
-            <ul>
-              <li>Card: Provide your card number, expiration date, CVC, and cardholder name.</li>
-              <li>Google Pay: Select this option if you want to pay using your Google Pay account.</li>
-              <li>Bank: Choose this if you prefer paying directly from your bank account.</li>
-            </ul>
-          </ul>
-        </li>
-        <li>Enter Billing Address (if required)
-          <ul>
-            <li>Depending on your payment method, you may need to provide your billing address. Follow the prompts and complete the fields as necessary.</li>
-          </ul>
-        </li>
-        <li>Optional: Save Your Payment Info
-          <ul>
-            <li>If you'd like, you can check the box to save your information for faster checkout in the future through Link.</li>
-          </ul>
-        </li>
-        <li>Review Your Donation Details
-          <ul>
-            <li>Double-check all the information you entered, including the donation amount, student organization name, and payment details.</li>
-          </ul>
-        </li>
-        <li>Submit Your Donation
-          <ul>
-            <li>Click the Pay button at the bottom of the page to complete your donation. You will see a confirmation message if your payment is successful.</li>
-          </ul>
-        </li>
-        <li>Confirmation Email and Virtual Donor Wall Invitation
-          <ul>
-            <li>After your donation, you will receive a confirmation email from ASUC.</li>
-            <li>You will also receive an email from Code For Good asking if you would like to be featured on our Virtual Donor Wall.</li>
-          </ul>
-        </li>
-      </ol>
-      <div class="donate-button">
-        <a href="https://donate.stripe.com/6oEeYJ5CX6Ay5a03cl" target="_blank">Donate Now</a>
+      <div class="form-container">
+        <div class="form">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Enter your name">
+
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email">
+
+          <label for="amount">Donation Amount</label>
+          <input type="text" id="amount" placeholder="$50, $100, $200">
+
+          <label for="payment-method">Payment Method</label>
+          <select id="payment-method">
+            <option value="credit-card">Credit Card</option>
+            <option value="paypal">PayPal</option>
+            <option value="bank-transfer">Bank Transfer</option>
+          </select>
+
+          <label for="message">Message (Optional)</label>
+          <textarea id="message" rows="4" placeholder="Leave a note..."></textarea>
+
+          <button>Proceed to Payment</button>
+        </div>
       </div>
-    </section>
-
+    </div>
+    
     <!-- footer -->
     <div id="footer"></div>
     <script>
@@ -418,7 +233,7 @@
       });
     </script>
 
-    <script src="js/contact.js"></script>
+    <script src="js/about.js"></script>
     <script
       src="https://kit.fontawesome.com/ee32c60bd9.js"
       crossorigin="anonymous"
