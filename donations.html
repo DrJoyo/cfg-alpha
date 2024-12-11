@@ -18,72 +18,40 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/about.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <script defer src="js/animation.js"></script>
+
     <style>
-      body 
-      {
+      body {
         background-color: #EEFDFC;
         color: #333;
+        font-family: 'Open Sans', sans-serif;
       }
 
-      .header 
-      {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px;
-        background-color: #D8F2EF;
-      }
-
-      .header .logo 
-      {
-        font-size: 24px;
-        font-weight: bold;
-      }
-
-      .header nav a 
-      {
-        margin: 0 15px;
-        text-decoration: none;
-        color: #333;
-        font-size: 16px;
-      }
-
-      .header nav a.active 
-      {
+      .navbar-nav .nav-link.active {
         font-weight: bold;
         text-decoration: underline;
       }
 
-      .main 
-      {
+      .main {
         text-align: center;
         padding: 50px;
       }
 
-      .intro-section 
-      {
+      .intro-section {
         text-align: center;
         padding: 20px;
       }
 
-      .intro-section h2 
-      {
+      .intro-section h2 {
         font-size: 30px;
         margin-bottom: 10px;
       }
 
-      .intro-section p 
-      {
+      .intro-section p {
         font-size: 18px;
         color: #555;
       }
 
-      .donor-wall 
-      {
+      .donor-wall {
         display: flex;
         justify-content: center;
         gap: 20px;
@@ -92,47 +60,83 @@
         max-width: 1200px;
       }
 
-      .donor-section 
-      {
+      .donor-section {
         background-color: #fff;
         border: 1px solid #ccc;
         border-radius: 8px;
-        padding: 10px;
         width: 30%;
-        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
         height: 300px;
       }
 
-      .donor-section h3 
-      {
-        font-size: 20px;
+      .donor-header {
+        flex: 0 0 auto;
+        padding: 10px 0;
+        border-bottom: 1px solid #ccc;
         text-align: center;
+        position: relative;
+        z-index: 10;
+      }
+
+      .donor-header h3 {
+        margin: 0;
+        font-size: 20px;
         color: #333;
       }
 
-      .donor-section p 
-      {
+      .donor-list {
+        flex: 1 1 auto;
+        overflow-y: auto;
+        padding: 10px 0;
+      }
+
+      .donor-list p {
         margin: 5px 0;
         font-size: 16px;
         text-align: center;
       }
 
-      .support-heading 
-      {
+      .gold-section .donor-header {
+        background: linear-gradient(to right, #FFD700, #E5C100);
+      }
+
+      .silver-section .donor-header {
+        background: linear-gradient(to right, #C0C0C0, #A9A9A9);
+      }
+
+      .bronze-section .donor-header {
+        background: linear-gradient(to right, #CD7F32, #9C5F23);
+      }
+
+      .gold-section .donor-header h3 .fa-medal {
+        color: #FFD700;
+        margin-right: 8px;
+      }
+
+      .silver-section .donor-header h3 .fa-medal {
+        color: #C0C0C0;
+        margin-right: 8px;
+      }
+
+      .bronze-section .donor-header h3 .fa-medal {
+        color: #CD7F32;
+        margin-right: 8px;
+      }
+
+      .support-heading {
         text-align: center;
         margin-top: 30px;
         font-size: 22px;
         color: #333;
       }
 
-      .support-heading p 
-      {
+      .support-heading p {
         font-size: 18px;
         color: #555;
       }
 
-      .instructions 
-      {
+      .instructions {
         background-color: #fff;
         padding: 20px;
         border-radius: 8px;
@@ -142,40 +146,34 @@
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       }
 
-      .instructions h2 
-      {
+      .instructions h2 {
         text-align: center;
         margin-bottom: 20px;
         font-size: 22px;
       }
 
-      .instructions ol 
-      {
+      .instructions ol {
         margin: 0;
         padding: 0;
         list-style-position: inside;
       }
 
-      .instructions ol li 
-      {
+      .instructions ol li {
         margin-bottom: 10px;
         font-size: 16px;
       }
 
-      .instructions ol ul li 
-      {
+      .instructions ol ul li {
         font-size: 14px;
       }
 
-      .donate-button 
-      {
+      .donate-button {
         display: block;
         text-align: center;
         margin: 20px auto;
       }
 
-      .donate-button a 
-      {
+      .donate-button a {
         text-decoration: none;
         background-color: #1FAD9F;
         padding: 10px 20px;
@@ -185,42 +183,35 @@
         border: 1px solid #ccc;
       }
 
-      .donate-button a:hover 
-      {
+      .donate-button a:hover {
         background-color: #0A9D8E;
       }
 
-      .footer 
-      {
+      .footer {
         text-align: center;
         padding: 20px;
         background-color: #D8F2EF;
         margin-top: 40px;
       }
 
-      .footer a 
-      {
+      .footer a {
         margin: 0 10px;
         color: #333;
         text-decoration: none;
       }
 
-      .footer a:hover 
-      {
+      .footer a:hover {
         text-decoration: underline;
       }
+
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-md sticky-top">
+    <nav class="navbar navbar-expand-md sticky-top" style="background-color: #D8F2EF;">
       <div class="container-fluid">
-        <a href="index"
-          ><img
-            class="ps-2 pe-4"
-            height="60"
-            src="images/cfglogo_transparent.png"
-            alt="Code For Good"
-        /></a>
+        <a href="index">
+          <img class="ps-2 pe-4" height="60" src="images/cfglogo_transparent.png" alt="Code For Good" />
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -255,41 +246,55 @@
       </section>
 
       <section class="donor-wall">
-        <div class="donor-section">
-          <h3>Silver Donors</h3>
-          <p>Johan</p>
-          <p>Shayla</p>
-          <p>Mohammed</p>
-          <p>Johan</p>
-          <p>Shayla</p>
-          <p>Mohammed</p>
-          <p>Johan</p>
-          <p>Shayla</p>
-          <p>Mohammed</p>
+        <div class="donor-section silver-section">
+          <div class="donor-header">
+            <h3><i class="fas fa-medal"></i> Silver Donors</h3>
+          </div>
+          <div class="donor-list">
+            <p>Johan</p>
+            <p>Shayla</p>
+            <p>Mohammed</p>
+            <p>Johan</p>
+            <p>Shayla</p>
+            <p>Mohammed</p>
+            <p>Johan</p>
+            <p>Shayla</p>
+            <p>Mohammed</p>
+          </div>
         </div>
-        <div class="donor-section">
-          <h3>Gold Donors</h3>
-          <p>Shayla</p>
-          <p>Mohammed</p>
-          <p>Johan</p>
-          <p>Shayla</p>
-          <p>Mohammed</p>
-          <p>Johan</p>
-          <p>Shayla</p>
-          <p>Mohammed</p>
-          <p>Johan</p>
+
+        <div class="donor-section gold-section">
+          <div class="donor-header">
+            <h3><i class="fas fa-medal"></i> Gold Donors</h3>
+          </div>
+          <div class="donor-list">
+            <p>Shayla</p>
+            <p>Mohammed</p>
+            <p>Johan</p>
+            <p>Shayla</p>
+            <p>Mohammed</p>
+            <p>Johan</p>
+            <p>Shayla</p>
+            <p>Mohammed</p>
+            <p>Johan</p>
+          </div>
         </div>
-        <div class="donor-section">
-          <h3>Bronze Donors</h3>
-          <p>Mohammed</p>
-          <p>Johan</p>
-          <p>Shayla</p>
-          <p>Mohammed</p>
-          <p>Johan</p>
-          <p>Shayla</p>
-          <p>Mohammed</p>
-          <p>Johan</p>
-          <p>Shayla</p>
+
+        <div class="donor-section bronze-section">
+          <div class="donor-header">
+            <h3><i class="fas fa-medal"></i> Bronze Donors</h3>
+          </div>
+          <div class="donor-list">
+            <p>Mohammed</p>
+            <p>Johan</p>
+            <p>Shayla</p>
+            <p>Mohammed</p>
+            <p>Johan</p>
+            <p>Shayla</p>
+            <p>Mohammed</p>
+            <p>Johan</p>
+            <p>Shayla</p>
+          </div>
         </div>
       </section>
 
@@ -372,11 +377,11 @@
     <!-- footer -->
     <div id="footer"></div>
     <script>
-    fetch('footer.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('footer').innerHTML = data;
-      });
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer').innerHTML = data;
+        });
     </script>
 
     <script src="js/about.js"></script>
